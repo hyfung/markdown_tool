@@ -3,17 +3,25 @@ import markdown_tool
 
 class TestMarkdownTool(unittest.TestCase):
 
-    def leftpad_test(self):
-        pass
+    def test_leftpad(self):
+        """
+        """
+        self.assertEqual()
 
-    def rightpad_test(self):
-        pass
+    def test_rightpad(self):
+        """
+        """
+        self.assertEqual()
 
-    def get_max_len_test(self):
-        pass
+    def test_get_max_len(self):
+        """
+        """
+        self.assertEqual()
 
-    def find_all_titles(self):
-        pass
+    def test_find_all_titles(self):
+        """
+        """
+        self.assertEqual()
 
 if __name__ == '__main__':
     unittest.main()
