@@ -19,12 +19,14 @@ String format for output:
 
 def leftpad(in_str: str, width: int, pad_char=' ') -> str:
     """Pad a string from with free character on left side"""
+    in_str = str(in_str)
     if width < len(in_str):
         return in_str
     return pad_char * (width - len(in_str)) + in_str
 
 def rightpad(in_str: str, width: int, pad_char=' ') -> str:
     """Pad a string from with free character on right side"""
+    in_str = str(in_str)
     if width < len(in_str):
         return in_str
     return in_str + pad_char * (width - len(in_str))
@@ -35,7 +37,9 @@ def get_max_len(arr: 'list of string') -> int:
 
 def find_all_titles(filename: str) -> list:
     """Returns a list of string starting with '#' """
-    pass
+    with open(filename, 'r') as f:
+        return [x for x in f.readlines() if x.startswith('#')]
+    
 
 def main():
     row_width = []
